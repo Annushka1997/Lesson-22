@@ -21,8 +21,7 @@ mySpreadFunction(array1,array2);
 
 // Երկրորդ տարբերակ
 
-
-const array3 = [];
+const array3 = [50,"Armenia","BMW"];
 const array4 = [1,2,3];
 const array5 = ["Hello","dear","Anna"];
 
@@ -38,7 +37,22 @@ function mySpreadFunction2 () {
 
 mySpreadFunction2(array3,array4,array5);
 
+// Երրորդ տարբերակ
 
+const array6 = ["HI"];
+const array7 = [1,2,3];
+const array8 = ["Hello","dear","Anna"];
+
+function mySpreadFunction3 () {
+    let len = arguments.length,
+        mySpread;
+        for (let i=1; i<len; i++) {
+            mySpread = [].concat.apply([], arguments);
+        }
+    return console.log(mySpread);
+}
+
+mySpreadFunction3(array6,array7,array8);
 
 
 
